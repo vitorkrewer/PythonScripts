@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from subprocess import call
 from tkinter import filedialog
-from PIL import ImageTk, Image
 
 def convert_docx_to_txt():
     input_file = filedialog.askopenfilename(filetypes=[('Documentos Word', '*.docx')])
@@ -36,23 +35,9 @@ root.title('Conversor de Arquivos')
 # Definir as propriedades da janela
 root.geometry("500x300")
 
-# Carrega a imagem original
-image = Image.open("image.png")
-
-# Insere uma imagem na janela
-image = Image.open("image.png")
-width = 400
-height = 200
-image = image.resize((width, height), Image.LANCZOS)
-photo = ImageTk.PhotoImage(image)
-image_label = tk.Label(root, image=photo)
-image_label.pack()
-
-
 # Insere um texto na janela
 text_label = tk.Label(root, text="Conversor de Arquivos para Moodle!")
 text_label.pack()
-
 
 menu_bar = tk.Menu(root)
 
